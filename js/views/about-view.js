@@ -1,3 +1,4 @@
+import { ASSET } from "../data.js";
 import { defineElement, staticTemplate } from "../components/dom.js";
 
 class AboutView extends HTMLElement {
@@ -23,11 +24,11 @@ class AboutView extends HTMLElement {
         <section class="certification-panel">
           <div><p class="eyebrow">Somos Confiables</p><h2>Marco Regulatorio y Certificación</h2></div>
           <article class="certification-card panel">
-            <img src="https://aguiplas.cl/wp-content/uploads/2025/12/image-1024x1024.png" alt="Sello Ley REP 20.920 Aguiplas" referrerpolicy="no-referrer" loading="lazy">
+            <img src="${ASSET}sello-ley-rep.png" alt="Sello Ley REP 20.920 Aguiplas" loading="lazy">
             <div><h3>Comprometidos con la Ley REP</h3><p>Facilitamos el cumplimiento de la Ley 20.920 de Responsabilidad Extendida del Productor, clave para el fomento del reciclaje y la economía circular en Chile.</p></div>
           </article>
           <article class="certification-card panel">
-            <img src="https://aguiplas.cl/wp-content/uploads/2025/12/image-1.png" alt="Sello Resolución Sanitaria SEREMI de Salud Aguiplas" referrerpolicy="no-referrer" loading="lazy">
+            <img src="${ASSET}sello-seremi.png" alt="Sello Resolución Sanitaria SEREMI de Salud Aguiplas" loading="lazy">
             <div><h3>Operación Regulada y Segura</h3><p>Contamos con Resolución Sanitaria vigente, otorgada por la SEREMI de Salud, que certifica que nuestras operaciones cumplen los requisitos de higiene y seguridad ambiental.</p></div>
           </article>
         </section>

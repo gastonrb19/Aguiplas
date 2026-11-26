@@ -31,7 +31,7 @@ class ProductsView extends HTMLElement {
                 <a class="button button--outline" href="#contacto" data-nav="contacto">Ir a Contacto <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
               </div>
             </div>
-            <figure class="product-main-image"><img id="product-image" alt="" src=""></figure>
+            <figure class="product-main-image"><img id="product-image" alt="" loading="lazy" decoding="async"></figure>
           </div>
           <div class="product-gallery-section"><h3 id="product-gallery-title">Fotografías reales en planta</h3><div class="product-gallery" id="product-gallery"></div></div>
         </section>
@@ -60,7 +60,6 @@ class ProductsView extends HTMLElement {
     this.querySelector("#product-whatsapp").href = `${WA_BASE}?text=${encodeURIComponent(data.message)}`;
     this.querySelector("#product-gallery-title").textContent = "Fotografías reales en planta (haz clic para ampliar)";
     const mainImage = this.querySelector("#product-image");
-    mainImage.referrerPolicy = "no-referrer";
     const gallery = this.querySelector("#product-gallery");
     const selectImage = (image, activeIndex) => {
       mainImage.src = image.src;
@@ -75,10 +74,10 @@ class ProductsView extends HTMLElement {
       button.type = "button";
       button.setAttribute("aria-label", `Ampliar imagen: ${image.caption}`);
       const thumbnail = element("img");
+      thumbnail.loading = "lazy";
+      thumbnail.decoding = "async";
       thumbnail.src = image.src;
       thumbnail.alt = image.alt;
-      thumbnail.loading = "lazy";
-      thumbnail.referrerPolicy = "no-referrer";
       button.append(thumbnail, element("span", "", image.caption));
       button.addEventListener("click", () => selectImage(image, index));
       gallery.append(button);

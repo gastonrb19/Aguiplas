@@ -9,8 +9,8 @@ class HomeView extends HTMLElement {
     this.dataset.ready = "true";
     this.replaceChildren(staticTemplate(`
       <section class="home-hero">
-        <img class="home-hero__slide is-visible" src="${ASSET}hero-molino-cinta.jpg" alt="" aria-hidden="true" referrerpolicy="no-referrer" loading="eager" fetchpriority="high">
-        <img class="home-hero__slide" src="${ASSET}hero-extrusora-fondo.jpg" alt="" aria-hidden="true" referrerpolicy="no-referrer" loading="eager">
+        <img class="home-hero__slide is-visible" src="${ASSET}hero-molino-cinta.jpg" alt="" aria-hidden="true" loading="eager" fetchpriority="high">
+        <img class="home-hero__slide" src="${ASSET}hero-extrusora-fondo.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" fetchpriority="low">
         <div class="home-hero__veil"></div>
         <div class="home-hero__content wrap">
           <div class="home-hero__copy">
@@ -32,10 +32,10 @@ class HomeView extends HTMLElement {
       </section>
 
       <section class="category-grid wrap" aria-label="Accesos a productos y servicios">
-        <a class="category-card" href="#productos-filtrado" data-product-link="filtrado"><img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-10-at-14.51.59-1.jpeg" alt="Pellet resultante del filtrado" referrerpolicy="no-referrer"><span class="category-card__label"><strong>FILTRADO</strong><small>Pellet Final PEAD/PEBD</small></span></a>
-        <a class="category-card" href="#productos-triturado" data-product-link="triturado"><img src="${ASSET}durezas-molido-blanco.jpg" alt="Material triturado de polietileno blanco"><span class="category-card__label"><strong>TRITURADO</strong><small>Material Molido PE</small></span></a>
-        <a class="category-card" href="#productos-excedentes" data-product-link="excedentes"><img src="${ASSET}durezas-bidones-blancos.jpg" alt="Bidones y durezas de polietileno en pallet"><span class="category-card__label"><strong>DUREZAS</strong><small>Bidones, Bobinas y Scrap</small></span></a>
-        <a class="category-card" href="#servicios" data-nav="servicios"><img src="${ASSET}guillotina-hidraulica.jpg" alt="Guillotina hidráulica industrial"><span class="category-card__label"><strong>SERVICIOS</strong><small>Corte, Molino & Filtrado</small></span></a>
+        <a class="category-card" href="#productos-filtrado" data-product-link="filtrado"><img loading="lazy" decoding="async" src="${ASSET}pellet-color.jpg" alt="Pellet resultante del filtrado"><span class="category-card__label"><strong>FILTRADO</strong><small>Pellet Final PEAD/PEBD</small></span></a>
+        <a class="category-card" href="#productos-triturado" data-product-link="triturado"><img loading="lazy" decoding="async" src="${ASSET}durezas-molido-blanco.jpg" alt="Material triturado de polietileno blanco"><span class="category-card__label"><strong>TRITURADO</strong><small>Material Molido PE</small></span></a>
+        <a class="category-card" href="#productos-excedentes" data-product-link="excedentes"><img loading="lazy" decoding="async" src="${ASSET}durezas-bidones-blancos.jpg" alt="Bidones y durezas de polietileno en pallet"><span class="category-card__label"><strong>DUREZAS</strong><small>Bidones, Bobinas y Scrap</small></span></a>
+        <a class="category-card" href="#servicios" data-nav="servicios"><img loading="lazy" decoding="async" src="${ASSET}guillotina-hidraulica.jpg" alt="Guillotina hidráulica industrial"><span class="category-card__label"><strong>SERVICIOS</strong><small>Corte, Molino & Filtrado</small></span></a>
       </section>
 
       <section class="home-content wrap">
@@ -105,7 +105,7 @@ class HomeView extends HTMLElement {
       </section>
 
       <section class="trust-band">
-        <img class="trust-band__image" src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-17-at-14.12.13.jpeg" alt="" aria-hidden="true" referrerpolicy="no-referrer" loading="lazy">
+        <img class="trust-band__image" src="${ASSET}planta-confianza-fondo.jpg" alt="" aria-hidden="true" loading="lazy">
         <div class="trust-band__veil" aria-hidden="true"></div>
         <div class="wrap">
           <p class="eyebrow">Somos Confiables</p>
@@ -167,9 +167,10 @@ class HomeView extends HTMLElement {
     this.galleryItems = plantGallery.map((item, index) => {
       const card = element("article", "plant-slide");
       const image = element("img");
+      image.loading = "lazy";
+      image.decoding = "async";
       image.src = item.src;
       image.alt = item.alt;
-      image.loading = "lazy";
       const overlay = element("div", "plant-slide__overlay");
       const top = element("div", "plant-slide__top");
       top.append(element("span", "", item.label), element("small", "", `${index + 1} / ${plantGallery.length}`));

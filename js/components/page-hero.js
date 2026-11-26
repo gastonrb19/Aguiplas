@@ -9,6 +9,8 @@ class PageHero extends HTMLElement {
     const imageName = this.getAttribute("image");
     if (imageName) {
       const image = element("img", "page-hero__image");
+      image.loading = "lazy";
+      image.decoding = "async";
       image.src = imageName.startsWith("http") ? imageName : `${ASSET}${imageName}`;
       image.alt = "";
       image.setAttribute("aria-hidden", "true");

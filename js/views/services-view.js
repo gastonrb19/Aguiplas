@@ -27,13 +27,13 @@ class ServicesView extends HTMLElement {
             <div class="service-card__meta"><span>Servicio 01</span><strong>PEAD y PEBD</strong></div>
             <h2>Filtrado</h2><p>El servicio de filtrado entrega un producto viable para nuestros clientes industriales, asegurando calidad y pureza en el pellet retornado.</p>
             <h3>Proceso en Planta</h3><div class="image-strip image-strip--three">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-15-at-14.53.02.jpeg" alt="Hilos de polietileno extruidos durante el filtrado" referrerpolicy="no-referrer" loading="lazy">
+              <img src="${ASSET}hilos-filtrado-color.jpg" alt="Hilos de polietileno extruidos durante el filtrado" loading="lazy">
               <img src="${ASSET}extrusora-hilos-negro.jpg" alt="Extrusión y enfriamiento de hilos en tina" loading="lazy">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-17-at-12.36.56-e1765987534451.jpeg" alt="Filamentos blancos y grises en línea de filtrado" referrerpolicy="no-referrer" loading="lazy">
+              <img src="${ASSET}hilos-filtrado-natural.jpg" alt="Filamentos blancos y grises en línea de filtrado" loading="lazy">
             </div>
             <h3>Producto Final Entregado (Pellet)</h3><div class="image-strip image-strip--three">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-10-at-14.51.59-1.jpeg" alt="Pellet filtrado de color" referrerpolicy="no-referrer" loading="lazy">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-10-at-14.52.00-1.jpeg" alt="Pellet filtrado natural y gris" referrerpolicy="no-referrer" loading="lazy">
+              <img src="${ASSET}pellet-color.jpg" alt="Pellet filtrado de color" loading="lazy">
+              <img src="${ASSET}pellet-natural-gris.jpg" alt="Pellet filtrado natural y gris" loading="lazy">
               <img src="${ASSET}sacos-aguiplas-pallet.jpg" alt="Sacos Aguiplas listos para despacho" loading="lazy">
             </div>
           </article>
@@ -43,12 +43,12 @@ class ServicesView extends HTMLElement {
             <h3>Proceso en Planta</h3><div class="image-strip">
               <img src="${ASSET}hero-molino-cinta.jpg" alt="Cinta transportadora y molino Aguiplas" loading="lazy">
               <img src="${ASSET}scrap-film-colores-saco.jpg" alt="Scrap de film clasificado en maxisaco" loading="lazy">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-15-at-14.15.05.jpeg" alt="Proceso de triturado en operación" referrerpolicy="no-referrer" loading="lazy">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-15-at-14.16.54-scaled.jpeg" alt="Descarga de material triturado hacia saco" referrerpolicy="no-referrer" loading="lazy">
+              <img src="${ASSET}triturado-operacion.jpg" alt="Proceso de triturado en operación" loading="lazy">
+              <img src="${ASSET}triturado-descarga-saco.jpg" alt="Descarga de material triturado hacia saco" loading="lazy">
             </div>
             <h3>Producto Final Entregado</h3><div class="image-strip image-strip--three">
               <img src="${ASSET}durezas-molido-blanco.jpg" alt="Material triturado blanco homogéneo" loading="lazy">
-              <img src="https://aguiplas.cl/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-15-at-14.17.16.jpeg" alt="Polietileno triturado homogéneo" referrerpolicy="no-referrer" loading="lazy">
+              <img src="${ASSET}triturado-material.jpg" alt="Polietileno triturado homogéneo" loading="lazy">
               <img src="${ASSET}sacos-aguiplas-pallet.jpg" alt="Sacos rotulados para entrega" loading="lazy">
             </div>
           </article>
